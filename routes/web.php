@@ -56,7 +56,7 @@ $router->group(['prefix' => '/user'], function () use ($router) {
     //request method: delete
     //update a user and add that
     // i.e. cURL
-    // curl -X DELETE http://localhost:8000/user/6?o=9
+    // curl -X DELETE http://localhost:8000/user/6
     $router->delete('/{id}', 'UserController@deleteUser');
 });
 
