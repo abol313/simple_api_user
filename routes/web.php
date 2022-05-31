@@ -26,7 +26,13 @@ $router->get('/', function () use ($router) {
 // read (get)      : http://localhost:8000/user
 // update (put)    : http://localhost:8000/user/{id}
 // delete (delete) : http://localhost:8000/user/{id}
-$router->group(['prefix' => '/user'], function () use ($router) {
+$router->group(['prefix' => '/user' ], function () use ($router) {
+    //Sign up user
+    $router->post('/sign_up','UserController@signUp');
+
+    //Sign in user
+    $router->post('/sign_in','UserController@signIn');
+
     //C Create
     //request method: put
     //create a user and add that
