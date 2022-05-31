@@ -27,6 +27,8 @@ $router->get('/', function () use ($router) {
 // update (put)    : http://localhost:8000/user/{id}
 // delete (delete) : http://localhost:8000/user/{id}
 $router->group(['prefix' => '/user' ], function () use ($router) {
+    //you must sign in/up to can use other tools!
+    //these methods does not need to authentication
     //Sign up user
     $router->post('/sign_up','UserController@signUp');
 

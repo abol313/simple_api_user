@@ -21,6 +21,7 @@ class UserController extends Controller
     //elpic for linux
     //voip
 
+    
     public function signIn(Request $request){
         $uniquer = [];
         //handle inputs variables
